@@ -9,6 +9,7 @@
 
 .modalWrapper{
   width: 30%;
+  min-width: 300px;
   background:linear-gradient(121deg, rgba(94,125,168,1) 0%, rgba(17,45,83,1) 50%, rgba(156,184,223,1) 100%);
   background-size: 400%;
   text-align: center;
