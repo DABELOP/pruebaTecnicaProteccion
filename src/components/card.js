@@ -16,13 +16,17 @@ function Card(props) {
     }, [])
 
 
-    let showDetail = () =>{
+    let showDetail = () => {
         cardShow[0] == 'detail' ? setCardShow(['img']) : setCardShow(['detail'])
     }
 
     return (
 
-        cardInfo == '' ? (<p>Cargando...</p>) : (
+        cardInfo == '' ? (
+            <div className='cardContainer charging' onClick={showDetail}>
+                <p>Cargando...</p>
+            </div>
+        ) : (
 
             cardShow[0] == 'img' ? (
                 <div className='cardContainer' onClick={showDetail}>
@@ -31,7 +35,7 @@ function Card(props) {
 
             ) : (
 
-                <div className='cardContainer' onClick={showDetail}>
+                <div className='cardContainer details' onClick={showDetail}>
                     <h2 className='nombrePersonaje'>{cardInfo.name}</h2>
 
                     <div className='nombreCompleto'>
